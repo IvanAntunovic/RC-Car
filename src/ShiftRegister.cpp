@@ -40,7 +40,7 @@ void ShiftRegister::shiftOut(void)
 	{
 		CLK_PORT &= ~(1 << clockPin);
 		
-		if (this->storageRegister & (1 << (7 - bitPosition)) )
+		if (this->storageRegister & (0x01 << (0x07 - bitPosition)) )
 		{
 			DATA_PORT |= 1 << dataPin;
 		}
